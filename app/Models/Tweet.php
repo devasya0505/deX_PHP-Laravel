@@ -4,21 +4,17 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Model;
 
 class Tweet extends Authenticatable
 {
-    use Notifiable;
-
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'message',
     ];
 
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    // ... more code
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }
