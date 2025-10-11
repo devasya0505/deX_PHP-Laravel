@@ -29,7 +29,7 @@
 
     <footer class="footer footer-center p-5 bg-base-300 text-base-content text-xs">
         <div>
-            <p>© {{ date('Y') }} deX - Built with Laravel and ❤️</p>
+            <p>© {{ date('Y') }} deX - All Rights Reserved</p>
         </div>
     </footer>
 </body>
